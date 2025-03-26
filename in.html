@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements and Classes Example</title>
+    <style>
+      
+        .my-button {
+            background-color: #f0f0f0;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            display: inline-block; 
+            margin-bottom: 10px;
+        }
+
+        .my-button:hover {
+            background-color: #ddd;
+            color: blue;
+            border-color: blue;
+        }
+
+        ul li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+
+        ul li:first-child {
+            font-weight: bold;
+            color: green;
+        }
+
+        ol li {
+            padding: 8px 0;
+        }
+
+        ol li:nth-child(even) {
+            background-color: #eee;
+        }
+
+        ol li:nth-child(3n+1) {
+            font-style: italic;
+        }
+
+        
+        .long-paragraph {
+            width: 300px; 
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .long-paragraph::first-line {
+            font-weight: bold;
+            color: darkblue;
+        }
+
+        
+        .section-title {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .section-title::before {
+            content: "✨"; 
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.1em;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 90%;
+            height: 1px;
+            background-color: #ddd;
+            margin-top: 8px;
+        }
+
+      
+        .my-input::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="my-button">Hover Me</button>
+
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+        <li>Fourth Item</li>
+    </ul>
+
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+    </ol>
+
+    <p class="long-paragraph">
+        This is a long paragraph of text that will span across multiple lines. We will use the ::first-line pseudo-element to style only the very first line of this text. This paragraph continues to have more content to demonstrate the line wrapping.
+    </p>
+
+    <h2 class="section-title">Our Services</h2>
+
+    <input type="text" placeholder="Enter your name" class="my-input">
+
+</body>
+</html>

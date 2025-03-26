@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f8ff;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Add a decorative line before every section */
+section::before {
+    content: "✦ ";
+    color: #003366;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Add a closing symbol after every section */
+section::after {
+    content: " ✦";
+    color: #003366;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Style headings with pseudo-elements */
+h1::before {
+    content: "🚀 ";
+    color: #ff9900;
+}
+
+h1::after {
+    content: " 🌟";
+    color: #ff9900;
+}
+
+h1, h2 {
+    color: #003366;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Add an underline to every paragraph */
+p::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #1e90ff;
+    margin-bottom: 5px;
+}
+
+/* Style first paragraph in every section */
+section p:first-child {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Hover Effects */
+section:hover {
+    background-color: #3d7894;
+    transition: background-color 0.3s ease;
+}
+
+h2:hover {
+    color: #1e90ff;
+    transition: color 0.3s ease;
+}
+
+/* Contact Section */
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer::before {
+    content: "— ";
+}
+
+footer::after {
+    content: " —";
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Add a checkmark before every skill */
+#skills li::before {
+    content: "✔ ";
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Add a book icon before every education entry */
+#education li::before {
+    content: "📘 ";
+    color: #003366;
+    font-weight: bold;
+}
+
+/* Add a 🔥 emoji before each project */
+#projects li::before {
+    content: "🔥 ";
+    font-weight: bold;
+    color: #ff4500;
+}
+
+/* Add a medal icon before each achievement */
+#achievements li::before {
+    content: "🏆 ";
+    font-weight: bold;
+    color: #ffcc00;
+}
+
